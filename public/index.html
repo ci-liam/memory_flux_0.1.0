@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Flux</title>
+    <style>
+      :root {
+        --color-primary: #00ff00;
+        --color-background: #000000;
+        --color-error: #ff0000;
+        --color-warning: #ffff00;
+        --color-success: #33ff33;
+        --font-mono: "Courier New", "Lucida Console", monospace;
+      }
+      body {
+        background-color: var(--color-background) !important;
+        color: var(--color-primary);
+        font-family: var(--font-mono) !important;
+        margin: 0;
+        overflow: hidden;
+      }
+      .memory-flux-terminal {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .terminal-line,
+      .terminal-prompt-line {
+        width: 100%;
+        max-width: 80ch;
+        text-align: center;
+      }
+      .message.warning {
+        color: var(--color-warning);
+      }
+      .message.error {
+        color: var(--color-error);
+      }
+      .message.success {
+        color: var(--color-success);
+      }
+      .question {
+        color: var(--color-primary);
+      }
+      .ascii-art {
+        white-space: pre;
+        line-height: 1.1;
+        margin-bottom: 1em;
+      }
+      .poetic-text {
+        color: var(--color-warning);
+        font-style: italic;
+        text-align: center;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+        text-shadow: 0 0 5px var(--color-warning);
+        white-space: pre-wrap;
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
